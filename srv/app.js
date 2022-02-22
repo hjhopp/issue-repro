@@ -2,12 +2,12 @@ const path    = require("path");
 const express = require("express");
 
 const app  = express();
-const port = 8888;
+const port = 8080;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-app.get("/test", (req, res, next) => res.json());
+app.post("/test", (req, res, next) => res.json({}));
 
 app.get("/*", (req, res, next) => {
     res.sendFile(path.join(__dirname, "..", "public", "index.html"));

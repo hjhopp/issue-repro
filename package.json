@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node srv/app",
-    "test": "node srv/app && playwright test"
+    "test": "playwright test",
+    "inspect": "cross-env PWDEBUG=1 playwright test"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,8 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.19.1",
+    "cross-env": "^7.0.3",
     "playwright": "^1.19.1"
   }
 }
