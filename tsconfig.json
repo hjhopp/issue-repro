@@ -1,0 +1,11 @@
+{
+    "extends" : "@tsconfig/svelte/tsconfig.json",
+
+    "compilerOptions": {
+        // makes smaller bundling by using tslib
+        "importHelpers": true
+    },
+
+    "include" : [ "./client/**/*.ts", "./client/**/*.svelte" ],
+    "exclude" : [ "./node_modules/*", "./client/gen/*" ]
+}
